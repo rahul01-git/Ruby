@@ -1,3 +1,4 @@
+puts "Guess the number between 1-10"
 secret_num = rand(1..10).to_s
 guess = ""
 guess_count = 0
