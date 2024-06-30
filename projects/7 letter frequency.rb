@@ -15,12 +15,24 @@ def letter_frequency(text)
     return frequency
 end
 
+# def letter_frequency(text)
+#     frequency = {}
+#     text.each_char do |char|
+#         unless frequency.has_key?(char)
+#             frequency[char] = 1
+#         else
+#             frequency[char] +=1
+#         end
+#     end
+#     return frequency
+# end
+
 
 puts "Letter Frequency"
 print "Text: "
 text = gets.chomp
 
-result = letter_frequency(text.upcase).sort
+result = letter_frequency(text)
 
 for key,value in result
     puts "#{key} = #{value}"
