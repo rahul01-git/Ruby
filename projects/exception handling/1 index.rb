@@ -1,7 +1,9 @@
 begin
   puts "before excep"
+#   raise Exception, "erro hai bhai"
   "test".odd?
   puts "after excep"
+  
 rescue ZeroDivisionError => e
     puts "#{e.class} : #{e.message}"
     e.backtrace.each {|location| puts location}
@@ -13,9 +15,10 @@ rescue ZeroDivisionError => e
     
 rescue NoMethodError => e
     puts "#{e.class} : #{e.message}"
+rescue Exception => e
+    puts e.message
 else 
     puts "no errors!"
-
 ensure
     puts "ensuring execution"
 end
