@@ -1,9 +1,17 @@
 class Person
+  attr_accessor :name
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
 
+  def display_person
+    puts "Name: #{@name}"
+    puts "Age: #{@age}"
+  end
 end
 
-p1 = Person.new
-p2 = Person.new
-
-puts p1.class
-puts p2
+p = Person.new("Rahul", 25)
+p.display_person
+p.name = "madan"
+puts p.name
